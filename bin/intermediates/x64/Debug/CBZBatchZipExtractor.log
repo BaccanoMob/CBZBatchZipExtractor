@@ -1,0 +1,5 @@
+﻿  Main.cpp
+  ZIPUtil.cpp
+  Generating Code...
+D:\Cpp\repos\CBZBatchZipExtractor\CBZBatchZipExtractor\src\ZIPUtil.cpp(179): warning C4715: 'chooseFunction': not all control paths return a value
+  CBZBatchZipExtractor.vcxproj -> D:\Cpp\repos\CBZBatchZipExtractor\bin\x64\Debug\CBZBatchZipExtractor.exe
