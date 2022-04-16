@@ -1,7 +1,7 @@
 ## CBZBatchZipExtractor
 
 Basically as name states its an app to zip folders to cbz/cbr files or extract them to folders.
-This app uses https://github.com/tfussell/miniz-cpp library to compress/extract folder/file.
+This app uses [miniz-cpp](https://github.com/tfussell/miniz-cpp) library to compress/extract folder/file.
 
 I'm a novice to programming and github so my code my not be giving the best result. 
 And technically, the app only zips to cbz not cbr but so far renaming cbz to cbr has not gotten any issues for me. 
