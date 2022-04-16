@@ -7,6 +7,8 @@ Im a novice to programming and github so my code my not be giving the best resul
 And technically, the app only zips to cbz not cbr but so far renaming cbz to cbr has not gotten any issues for me. 
 If opening cbr files have any issues or errors, open an issue.
 
+Single zip extraction or single folder zipping is currently not added (work around is move it to a new folder and use the new folder as directory).
+I'll prolly add it in if i plan more features or change libraries.
 
 ---
 
