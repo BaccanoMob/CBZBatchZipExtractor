@@ -12,7 +12,7 @@ static void zipAllinFolder(const std::string& folderPath, const std::string& zip
     }
     
     file.save(zipPath);
-    std::filesystem::remove_all(folderPath);
+    //std::filesystem::remove_all(folderPath);
 
 }
 
@@ -24,7 +24,7 @@ static void unzipAllinFolder(const std::string& folderPath, const std::string& z
 
     file.extractall(folderPath);
 
-    std::filesystem::remove(zipPath);
+    //std::filesystem::remove(zipPath);
 }
 
 bool convertExtenstions(const std::string& baseDir, const char* oldExt, const char* newExt)
@@ -97,7 +97,6 @@ bool unzipAllinDirectory(const std::string& baseDir)
 
                 PRINTLOG("Folder Extracted!!");
             }
-            //folderList.emplace_back();
         }
         PRINTLOG("Finished Extracting!!\n");
     }
