@@ -52,44 +52,16 @@ bool zipAllinDirectory(const std::string& baseDir, const std::string& fileExt)
 {
     if (std::filesystem::is_directory(baseDir)) {
 
-        bool hasTitleCheck = 0;
-        bool mangadesk = 0;
-
-        if (baseDir.find("mangadesk") != std::string::npos)
-        {
-            char rep;
-            mangadesk = 1;
-            PRINTLOG("Does the folder have title included (y/n):");
-            std::cin >> rep;
-
-            if (rep == 'y' || rep == 'Y') hasTitleCheck = 1;
-            else hasTitleCheck = 0;
-        }
-
         for (auto const& dir_entry : std::filesystem::directory_iterator{ baseDir })
         {
-            std::string oldFolderName = relative(dir_entry, baseDir).string();
-            std::string newFolderName = oldFolderName;
-            if (mangadesk && std::filesystem::is_directory(baseDir + "/" + oldFolderName))
-            {
-                newFolderName = oldFolderName.substr(0, oldFolderName.length() - 11);
-                if (hasTitleCheck)
-                {
-                    newFolderName.replace(newFolderName.find(" [en-data] "), 11, " - ");
-                }
-                else
-                {
-                    newFolderName.replace(newFolderName.find(" [en-data] "), 11, "");
-                }
-            }
-            
-            std::string folderPath = baseDir + "/" + oldFolderName;
-            std::string zipPath = baseDir + "/" + newFolderName + "." + fileExt;
+            std::string folderName = relative(dir_entry, baseDir).string();
+            std::string folderPath = baseDir + "/" + folderName;
+            std::string zipPath = baseDir + "/" + folderName + "." + fileExt;
             if (std::filesystem::is_directory(folderPath))
             {
                 if (std::filesystem::exists(zipPath))
-                    newFolderName += "(copy)";
-                PRINTLOG("Creating Folder: " << newFolderName);
+                    folderName += "(copy)";
+                PRINTLOG("Creating Folder: " << folderName);
                 PRINTLOG("Zipping");
                 PRINTLOG("Folder Path: " << folderPath);
                 PRINTLOG("Zip Path: " << zipPath);
