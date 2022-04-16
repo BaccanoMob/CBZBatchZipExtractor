@@ -31,4 +31,4 @@ Get the exe from the Releases Section.
 
 ## License
 
-[MIT License](https://github.com/xgi/houdoku/blob/master/LICENSE.txt)
+[MIT License](https://github.com/BaccanoMob/CBZBatchZipExtractor/blob/master/LICENSE.txt)
